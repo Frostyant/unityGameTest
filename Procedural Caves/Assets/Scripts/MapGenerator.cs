@@ -206,7 +206,7 @@ public class MapGenerator : MonoBehaviour {
 					map[x,y] = 1;
 				}
 				map[x,y] = (pseudoRandom.Next (0,100) < randomFillPercent)? 1:0;
-				//	That's a weird if statement...
+				//	That's a weird if statement... indeed
 			}
 			
 		}
@@ -289,10 +289,10 @@ public class MapGenerator : MonoBehaviour {
 				for (int x = tile.tileX -1; x <= tile.tileX+1; x++){
 					for (int y = tile.tileY -1; y <= tile.tileY+1; y++){
 						if(x == tile.tileX || y == tile.tileY){
-							Debug.Log(x);
-							Debug.Log(y);
 							if(map[x,y] == 1){
 								edgeTiles.Add(tile);
+								Debug.Log(x);
+								Debug.Log(y);
 							}
 						}
 					}
